@@ -1,6 +1,13 @@
 {
   "nodes": [
     {
+      "id": "",
+      "type": "post",
+      "title": "Η Ενέργεια στην Ελλάδα",
+      "slug": "",
+      "connections": 0
+    },
+    {
       "id": "formatting-reference",
       "type": "post",
       "title": "Formatting Reference",
@@ -13,6 +20,20 @@
       "title": "Getting Started",
       "slug": "getting-started",
       "connections": 6
+    },
+    {
+      "id": "kostos-energeias-ellada",
+      "type": "post",
+      "title": "Ποιο είναι το πραγματικό κόστος",
+      "slug": "kostos-energeias-ellada",
+      "connections": 0
+    },
+    {
+      "id": "lets-see",
+      "type": "post",
+      "title": "Για να δουμε",
+      "slug": "lets-see",
+      "connections": 1
     },
     {
       "id": "obsidian-embeds-demo",
@@ -116,12 +137,17 @@
       "source": "getting-started",
       "target": "formatting-reference",
       "type": "link"
+    },
+    {
+      "source": "lets-see",
+      "target": "vault-cms-guide",
+      "type": "link"
     }
   ],
   "metadata": {
-    "totalPosts": 5,
-    "totalConnections": 16,
+    "totalPosts": 8,
+    "totalConnections": 17,
     "maxNodesApplied": false,
-    "originalNodeCount": 5
+    "originalNodeCount": 8
   }
 }

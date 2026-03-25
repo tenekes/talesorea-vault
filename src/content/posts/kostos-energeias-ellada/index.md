@@ -7,7 +7,7 @@ tags:
   - ΔΕΗ
   - ελλάδα
   - φωτοβολταικά
-image: "[](IMG_2045.jpg)"
+image: "[](../attachments/IMG_2045.jpg)"
 imageAlt: Κόστος Ενέργειας
 imageOG: false
 hideCoverImage: false

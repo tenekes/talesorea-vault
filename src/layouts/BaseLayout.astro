@@ -34,11 +34,19 @@ if (shouldLoadLocalFonts()) {
 }
 
 export interface Props {
-  seoData: SEOData;
+  seoData?: SEOData;
+  frontmatter?: any;
   bodyClass?: string;
 }
 
-const { seoData, bodyClass = '' } = Astro.props;
+const { seoData: providedSeoData, frontmatter, bodyClass = '' } = Astro.props;
+
+const seoData = providedSeoData || {
+  title: frontmatter?.title || siteConfig.title,
+  description: frontmatter?.description || siteConfig.description,
+  canonical: Astro.url ? Astro.url.href : '',
+  ogType: 'website' as const,
+};
 
 // Determine scrollbar class based on configuration
 const scrollbarClass = siteConfig.hideScrollBar ? '' : 'show-scrollbars';

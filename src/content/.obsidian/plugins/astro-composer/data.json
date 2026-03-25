@@ -77,7 +77,7 @@
   "draftProperty": "draft",
   "draftLogic": "true-is-draft",
   "publishDateField": "date",
-  "renameOnTitleClick": true,
+  "renameOnTitleClick": false,
   "enableScheduledPublishing": true,
   "updateModifiedDate": true,
   "modifiedDateField": "lastModified",

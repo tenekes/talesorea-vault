@@ -26,6 +26,8 @@ import swup from '@swup/astro';
 import refreshContentOnChange from './src/integrations/refresh-content-on-change.ts';
 import { fileURLToPath } from 'node:url';
 
+import preact from '@astrojs/preact';
+
 // Deployment platform configuration
 const DEPLOYMENT_PLATFORM = process.env.DEPLOYMENT_PLATFORM || 'netlify';
 
@@ -109,32 +111,26 @@ image: {
       protocol: 'https'
     }]
   },
-  integrations: [
-    refreshContentOnChange(),
-    tailwind(),
-    sitemap(),
-    mdx(),
-    swup({
-      theme: false,
-      animationClass: 'transition-swup-',
-      containers: ['#swup-container'],
-      smoothScrolling: false,
-      cache: process.env.NODE_ENV === 'production', // off in dev so post edits show immediately
-      preload: true,
-      accessibility: false,
-      updateHead: true,
-      updateBodyClass: false,
-      globalInstance: true,
-      plugins: [], // Disable all plugins including scroll
-      skipPopStateHandling: (event) => {
-        // ALWAYS skip Swup handling for back/forward navigation
-        // Let the browser handle it naturally
-        return true;
-      },
-      // Simplified link selector for better compatibility
-      linkSelector: 'a[href]:not([data-no-swup]):not([href^="mailto:"]):not([href^="tel:"])'
-    })
-  ],
+  integrations: [refreshContentOnChange(), tailwind(), sitemap(), mdx(), swup({
+    theme: false,
+    animationClass: 'transition-swup-',
+    containers: ['#swup-container'],
+    smoothScrolling: false,
+    cache: process.env.NODE_ENV === 'production', // off in dev so post edits show immediately
+    preload: true,
+    accessibility: false,
+    updateHead: true,
+    updateBodyClass: false,
+    globalInstance: true,
+    plugins: [], // Disable all plugins including scroll
+    skipPopStateHandling: (event) => {
+      // ALWAYS skip Swup handling for back/forward navigation
+      // Let the browser handle it naturally
+      return true;
+    },
+    // Simplified link selector for better compatibility
+    linkSelector: 'a[href]:not([data-no-swup]):not([href^="mailto:"]):not([href^="tel:"])'
+  }), preact()],
   markdown: {
       remarkPlugins: [
       remarkObsidianImageSize, // Parse Obsidian image size syntax first

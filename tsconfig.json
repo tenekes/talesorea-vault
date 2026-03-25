@@ -3,13 +3,32 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/layouts/*": ["src/layouts/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/types": ["src/types.ts"],
-      "@/config": ["src/config.ts"]
+      "@/*": [
+        "src/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/layouts/*": [
+        "src/layouts/*"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ],
+      "@/types": [
+        "src/types.ts"
+      ],
+      "@/config": [
+        "src/config.ts"
+      ]
     },
-    "types": ["unified", "@types/unist", "@types/hast", "astro/client"]
+    "types": [
+      "unified",
+      "@types/unist",
+      "@types/hast",
+      "astro/client"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }

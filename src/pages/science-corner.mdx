@@ -1,0 +1,35 @@
+---
+title: "Understanding Light and Trees: A Cartoon Guide"
+layout: ../layouts/BaseLayout.astro
+---
+import AnimatedCartoonTree from '../components/AnimatedCartoonTree.jsx';
+
+# Welcome to the Science Corner!
+
+Today, we're going to look at how trees interact with the sun, utilizing a simple animated model. Markdown is great for writing the text, but MDX allows us to drop dynamic components right here.
+
+### The Scene
+
+Look at the animation below. We see a simple cartoon-like tree under a bright sun. You’ll notice the leaves gently swaying, and rays of light emanating from the sun towards the tree.
+
+<AnimatedCartoonTree client:load />
+
+### How It Works (Informative Part)
+
+This animation visualizes two key types of energy hitting the tree:
+
+1.  **Visible Light (Yellow Rays):** The solid yellow lines represent visible light. This is the primary energy source for **Photosynthesis**. The tree uses pigments (like chlorophyll in the leaves) to absorb this light, converting water and CO₂ into sugar (food) and oxygen.
+
+2.  **UV Radiation (Dashed Purple Rays):** The dashed purple lines represent **Ultraviolet (UV) Radiation**. It is an invisible, high-energy wave.
+    * *Informative:* While we show it here in purple, UV light is invisible to the human eye.
+    * *The Danger:* Just like UV rays can give you a sunburn, they can also damage the tree's DNA and photosystems.
+    * *The Protection:* Trees can’t put on sunscreen, but they produce their own "solar pigments" (like flavonoids). These compounds act as a protective barrier within the leaves, absorbing the UV radiation before it can harm the vital parts of the plant.
+
+### The Animation Technology
+
+This whole animation is actually **one single SVG image** embedded within a small JavaScript component. We use **CSS Keyframes** to animate different parts:
+* `swayLeaves` rotates the entire leaves group back and forth.
+* `uvFlow` animates the `stroke-dashoffset` of the purple lines, making them look like they are streaming towards the leaves.
+
+By blending the story (Markdown) with the visualization (Component), MDX makes learning more engaging!
+Now, when you visit /science-corner on your Astro site, you will see your text seamlessly integrated with the animated cartoon tree

@@ -1,15 +1,15 @@
 ---
 title: Ποιο είναι το πραγματικό κόστος
 date: 2026-03-25
-description: ""
+description: Ωραια αυτο ειναι
 tags:
   - ενέργεια
   - ΔΕΗ
   - ελλάδα
   - φωτοβολταικά
-image: "[](../attachments/IMG_2045.jpg)"
+image: "[[attachments/IMG_2045.jpg]]"
 imageAlt: Κόστος Ενέργειας
-imageOG: false
+imageOG: true
 hideCoverImage: false
 hideTOC: false
 targetKeyword: ""

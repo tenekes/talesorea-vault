@@ -1,7 +1,7 @@
 {
-  "runWizardOnStartup": true,
+  "runWizardOnStartup": false,
   "currentTemplate": "standard",
-  "currentTheme": "catppuccin",
+  "currentTheme": "minimal",
   "customThemeFile": "custom",
   "contentOrganization": "folder-based",
   "themeColors": {
@@ -29,7 +29,7 @@
   },
   "footer": {
     "enabled": true,
-    "content": "© 2025 {author}. Built with the <a href=\"https://github.com/davidvkimball/astro-modular\" target=\"_blank\">Astro Modular</a> theme.",
+    "content": "© 2025 {author}. All Copyrights Reserved",
     "showSocialIconsInFooter": true
   },
   "seo": {
@@ -68,6 +68,11 @@
         "title": "GitHub",
         "url": "https://github.com/davidvkimball",
         "icon": "github"
+      },
+      {
+        "title": "New Social",
+        "url": "https://example.com",
+        "icon": ""
       }
     ]
   },
@@ -165,6 +170,9 @@
     "profilePicture": false,
     "comments": false,
     "featureButton": "mode",
+    "showPostCardCoverImages": "featured-and-posts",
+    "postCardAspectRatio": "og",
+    "customPostCardAspectRatio": "2.5/1",
     "quickActions": {
       "enabled": true,
       "toggleMode": true,

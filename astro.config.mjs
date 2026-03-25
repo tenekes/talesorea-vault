@@ -211,17 +211,9 @@ image: {
       'process.env.ASTRO_CONTENT_COLLECTION_CACHE': 'false'
     },
     optimizeDeps: {
-      exclude: ['astro:content']
+      exclude: ['astro:content', '@astrojs/preact', 'astro:preact:opts']
     },
-    exclude: ['**/_redirects'],
-    ssr: {
-      external: ['astro:preact:opts']
-    },
-    build: {
-      rollupOptions: {
-        external: ['astro:preact:opts']
-      }
-    }
+    exclude: ['**/_redirects']
   },
   build: {
     assets: '_assets'

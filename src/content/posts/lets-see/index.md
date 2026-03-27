@@ -6,7 +6,7 @@ tags:
   - αρθρο
   - φαντασία
   - ενεργεια
-image: "[[attachments/mountains.png]]"
+image: attachments/mountains.png
 imageAlt: Τρομερη Φωτογραφία
 imageOG: true
 hideCoverImage: false

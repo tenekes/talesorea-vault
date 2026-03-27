@@ -9,9 +9,9 @@ const profilePicture = siteConfig.profilePicture;
 // Style classes for profile picture in header
 const getHeaderProfilePictureClasses = (style: string) => {
   switch (style) {
-    case 'circle': return 'w-8 h-8 rounded-full object-cover border-2 border-primary-200 dark:border-primary-700';
-    case 'square': return 'w-8 h-8 rounded-lg object-cover border-2 border-primary-200 dark:border-primary-700';
-    default: return 'h-8 object-contain'; // none - height constrained, width flexible
+    case 'circle': return 'w-8 h-8 rounded-full object-cover border-2 border-primary-200 dark:border-primary-700 dark:invert';
+    case 'square': return 'w-8 h-8 rounded-lg object-cover border-2 border-primary-200 dark:border-primary-700 dark:invert';
+    default: return 'h-8 object-contain dark:invert'; // none - height constrained, width flexible
   }
 };
 

@@ -70,7 +70,7 @@
     "commandId": "astro-modular-settings:open-settings",
     "iconId": "rocket"
   },
-  "showMdxFilesInExplorer": false,
+  "showMdxFilesInExplorer": true,
   "processBackgroundFileChanges": true,
   "syncDraftDate": true,
   "draftDetectionMode": "property",

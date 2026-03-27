@@ -60,7 +60,7 @@ export function calculateReadingTime(content: string): ReadingTime {
   // Handle empty or undefined content
   if (!content || typeof content !== "string") {
     return {
-      text: "1 min read",
+      text: "1 λεπτό ανάγνωση",
       minutes: 1,
       time: 60000,
       words: 0,
@@ -86,7 +86,7 @@ export function calculateReadingTime(content: string): ReadingTime {
   const minutes = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
 
   return {
-    text: `${minutes} min read`,
+    text: `${minutes} λεπτά ανάγνωση`,
     minutes: minutes,
     time: minutes * 60 * 1000, // in milliseconds
     words: wordCount,
@@ -95,7 +95,7 @@ export function calculateReadingTime(content: string): ReadingTime {
 
 // Get mobile-friendly reading time text
 export function getReadingTimeMobile(readingTime: ReadingTime): string {
-  return `${readingTime.minutes} min`;
+  return `${readingTime.minutes} ${readingTime.minutes === 1 ? 'λεπτό' : 'λεπτά'}`;
 }
 
 // Extract reading time from remark plugin or calculate manually
@@ -129,7 +129,7 @@ export function getReadingTime(
 
   // Default for no content and no valid remark data
   return {
-    text: "1 min read",
+    text: "1 λεπτό ανάγνωση",
     minutes: 1,
     time: 60000,
     words: 0,
@@ -180,14 +180,14 @@ export function formatDate(date: Date): string {
       date.getUTCMonth(),
       date.getUTCDate()
     );
-    return localDate.toLocaleDateString("en-US", {
+    return localDate.toLocaleDateString("el-GR", {
       year: "numeric",
       month: "long",
       day: "numeric",
     });
   }
 
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("el-GR", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -209,14 +209,14 @@ export function formatDateMobile(date: Date): string {
       date.getUTCMonth(),
       date.getUTCDate()
     );
-    return localDate.toLocaleDateString("en-US", {
+    return localDate.toLocaleDateString("el-GR", {
       year: "numeric",
       month: "short",
       day: "numeric",
     });
   }
 
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("el-GR", {
     year: "numeric",
     month: "short",
     day: "numeric",

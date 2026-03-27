@@ -158,6 +158,13 @@
       "type": "existing",
       "hidden": false,
       "mdOnly": false
+    },
+    {
+      "id": "plugin-whisper;1",
+      "name": "Whisper Idle",
+      "type": "existing",
+      "hidden": false,
+      "mdOnly": false
     }
   ],
   "explorerCommands": [],

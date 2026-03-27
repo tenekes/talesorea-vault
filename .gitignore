@@ -44,7 +44,7 @@ ehthumbs.db
 src/content/.obsidian/workspace.json
 src/content/.obsidian/workspace-mobile.json
 obsidian_askpass.sh
-
+src/content/.obsidian/plugins/whisper/data.json
 # Generated deployment platform files (GitHub Pages + Cloudflare Workers only)
 public/_redirects
 public/_headers

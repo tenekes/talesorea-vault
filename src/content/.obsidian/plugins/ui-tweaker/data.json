@@ -165,6 +165,13 @@
       "type": "existing",
       "hidden": false,
       "mdOnly": false
+    },
+    {
+      "id": "plugin-obsidian-languagetool-plugin;1",
+      "name": "Aa",
+      "type": "existing",
+      "hidden": false,
+      "mdOnly": false
     }
   ],
   "explorerCommands": [],

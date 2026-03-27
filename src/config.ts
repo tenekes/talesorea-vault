@@ -256,7 +256,7 @@ export const siteConfig: SiteConfig = {
     // [CONFIG:COMMAND_PALETTE_SHORTCUT]
     shortcut: "ctrl+K",
     // [CONFIG:COMMAND_PALETTE_PLACEHOLDER]
-    placeholder: "Search posts",
+    placeholder: "Αναζήτηση άρθρων",
     search: {
       // [CONFIG:COMMAND_PALETTE_SEARCH_POSTS]
       posts: true,
@@ -327,7 +327,12 @@ export const siteConfig: SiteConfig = {
       {
         title: "Facebook",
         url: "https://facebook.com/talesorea",
-        icon: "fa-facebook-f",
+        icon: "facebook",
+      },
+      {
+        title: "Instagram",
+        url: "https://instagram.com/talesorea",
+        icon: "instagram",
       },
     ],
   },

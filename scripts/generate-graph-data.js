@@ -442,7 +442,7 @@ async function generateGraphData() {
         type: "post",
         title: post.data.title,
         slug: post.id,
-        date: post.data.date
+        date: post.data.date && !isNaN(post.data.date.getTime())
           ? post.data.date.toISOString()
           : new Date().toISOString(),
         connections: 0,

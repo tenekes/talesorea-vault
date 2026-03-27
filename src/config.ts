@@ -234,7 +234,7 @@ export const siteConfig: SiteConfig = {
     // [CONFIG:FOOTER_ENABLED]
     enabled: true,
     // [CONFIG:FOOTER_CONTENT]
-    content: `© 2025 {author}. All Copyrights Reserved`,
+    content: `© 2026 {author}. All Copyrights Reserved`,
     // [CONFIG:FOOTER_SHOW_SOCIAL_ICONS]
     showSocialIconsInFooter: true,
   },
@@ -290,19 +290,19 @@ export const siteConfig: SiteConfig = {
   // Profile Picture
   profilePicture: {
     // [CONFIG:PROFILE_PICTURE_ENABLED]
-    enabled: false, 
+    enabled: true, 
     // [CONFIG:PROFILE_PICTURE_IMAGE]
-    image: "/profile.jpg", // Path to your profile image (place in public/ directory)
+    image: "/talesorea.png", // Path to your profile image (place in public/ directory)
     // [CONFIG:PROFILE_PICTURE_ALT]
-    alt: "Profile picture",
+    alt: "Τα Λες Ωραία Logo",
     // [CONFIG:PROFILE_PICTURE_SIZE]
     size: "md", // "sm" (32px), "md" (48px), or "lg" (64px) - only affects footer placement
     // [CONFIG:PROFILE_PICTURE_URL]
     url: "", // Optional
     // [CONFIG:PROFILE_PICTURE_PLACEMENT]
-    placement: "footer", // "footer" or "header"
+    placement: "header", // "footer" or "header"
     // [CONFIG:PROFILE_PICTURE_STYLE]
-    style: "circle", // "circle", "square", or "none"
+    style: "none", // "circle", "square", or "none"
   },
 
   // Navigation
@@ -409,7 +409,7 @@ export const siteConfig: SiteConfig = {
     // [CONFIG:POST_OPTIONS_POST_NAVIGATION]
     postNavigation: true,
     // [CONFIG:POST_OPTIONS_SHOW_POST_CARD_COVER_IMAGES]
-    showPostCardCoverImages: "featured-and-posts", // "all" | "featured" | "home" | "posts" | "featured-and-posts" | "none"
+    showPostCardCoverImages: "all", // "all" | "featured" | "home" | "posts" | "featured-and-posts" | "none"
     // [CONFIG:POST_OPTIONS_POST_CARD_ASPECT_RATIO]
     postCardAspectRatio: "og", // "16:9" | "4:3" | "3:2" | "og" | "square" | "golden" | "custom"
     // [CONFIG:POST_OPTIONS_CUSTOM_POST_CARD_ASPECT_RATIO]

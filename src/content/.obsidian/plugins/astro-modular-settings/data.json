@@ -21,7 +21,7 @@
     "defaultOgImageAlt": "Τα Λες Ωραια"
   },
   "layout": {
-    "contentWidth": "45rem"
+    "contentWidth": "65rem"
   },
   "tableOfContents": {
     "enabled": true,
@@ -29,7 +29,7 @@
   },
   "footer": {
     "enabled": true,
-    "content": "© 2025 {author}. All Copyrights Reserved",
+    "content": "© 2026 {author}. All Copyrights Reserved",
     "showSocialIconsInFooter": true
   },
   "seo": {
@@ -136,7 +136,7 @@
       "showOrphanedPosts": true
     },
     "postNavigation": true,
-    "showPostCardCoverImages": "featured-and-posts",
+    "showPostCardCoverImages": "all",
     "postCardAspectRatio": "og",
     "customPostCardAspectRatio": "2.5/1",
     "comments": {
@@ -170,7 +170,7 @@
     "profilePicture": false,
     "comments": false,
     "featureButton": "mode",
-    "showPostCardCoverImages": "featured-and-posts",
+    "showPostCardCoverImages": "all",
     "postCardAspectRatio": "og",
     "customPostCardAspectRatio": "2.5/1",
     "quickActions": {

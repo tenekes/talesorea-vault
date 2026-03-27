@@ -43,36 +43,18 @@
       {
         "title": "Αρθρα",
         "url": "/posts/"
-      },
-      {
-        "title": "Projects",
-        "url": "/projects/"
-      },
-      {
-        "title": "Docs",
-        "url": "/docs/"
-      },
-      {
-        "title": "Άσχετο",
-        "url": "/about/",
-        "children": [
-          {
-            "title": "Privacy Policy",
-            "url": "/privacy-policy/"
-          }
-        ]
       }
     ],
     "social": [
       {
         "title": "X",
         "url": "https://X.com/talesorea",
-        "icon": "X"
+        "icon": "x-twitter"
       },
       {
-        "title": "New Social",
-        "url": "https://example.com",
-        "icon": ""
+        "title": "Facebook",
+        "url": "https://facebook.com/talesorea",
+        "icon": "fa-facebook-f"
       }
     ]
   },
@@ -239,8 +221,8 @@
     }
   },
   "optionalContentTypes": {
-    "projects": true,
-    "docs": true
+    "projects": false,
+    "docs": false
   },
   "availableThemes": "default",
   "customThemes": "",

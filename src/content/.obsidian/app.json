@@ -4,7 +4,8 @@
   "showIndentGuide": false,
   "attachmentFolderPath": "./Attachments",
   "userIgnoreFilters": [
-    "bases/"
+    "bases/",
+    "config.ts"
   ],
   "focusNewTab": false,
   "mobilePullAction": "command-palette:open",

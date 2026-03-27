@@ -1,6 +1,6 @@
 ---
 title: eisagogi-sto-matrix
-date: 27-03-2026
+date: 2027-03-27
 description: ""
 tags: []
 image: ""

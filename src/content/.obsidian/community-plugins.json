@@ -18,5 +18,6 @@
   "vault-cms",
   "file-name-history",
   "whisper",
-  "obsidian-languagetool-plugin"
+  "obsidian-languagetool-plugin",
+  "mdx"
 ]

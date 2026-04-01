@@ -112,7 +112,8 @@
     }
   },
   "supportedExtensions": [
-    "md"
+    "md",
+    "mdx"
   ],
   "debugMode": false
 }

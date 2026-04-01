@@ -12,31 +12,15 @@ import DocumentationCard from '@/components/DocumentationCard.astro';
 import Icon from '@/components/Icon.astro';
 import { optimizePostImagePath } from '@/utils/images';
 
-// Get all posts and pages and filter by visibility
+// Get all posts and filter by visibility
 const allPosts = await getCollection('posts');
-const allPages = await getCollection('pages');
 const isDev = import.meta.env.DEV;
-
-// Map pages to a post-compatible shape for the feed
-const visiblePages = allPages
-  .filter(page => shouldShowContent(page, isDev))
-  .map(page => ({
-    ...page,
-    collection: 'pages' as const,
-    data: {
-      ...page.data,
-      date: page.data.lastModified || new Date(0),
-      tags: []
-    }
-  }));
-
 const visiblePosts = allPosts.filter(post => shouldShowPost(post, isDev));
-const combinedPostsAndPages = [...visiblePosts, ...visiblePages] as any[];
-const sortedPosts = sortPostsByDate(combinedPostsAndPages);
+const sortedPosts = sortPostsByDate(visiblePosts);
 
-// Process posts and pages for reading time and word count
+// Process posts for reading time and word count
 const processedPosts = await Promise.all(
-  sortedPosts.map(async (item) => await processPost(item))
+  sortedPosts.map(async (post) => await processPost(post))
 ) as any[];
 
 // Get featured post based on configuration

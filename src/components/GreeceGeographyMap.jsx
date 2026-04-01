@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import * as d3 from 'd3';
+import geoDataRaw from '../data/greece-prefectures.json';
 
-// Extracted from our generated JSON. Will fill this out automatically.
 const PREFECTURE_DATA = {
   "Attiki": { population: "3,814,064", capital: "Αθήνα", cities: ["Πειραιάς", "Περιστέρι", "Καλλιθέα"] },
   "Thessaloniki": { population: "1,110,551", capital: "Θεσσαλονίκη", cities: ["Καλαμαριά", "Εύοσμος"] },
@@ -20,26 +20,8 @@ export default function GreeceGeographyMap() {
   const wrapperRef = useRef(null);
   const [hovered, setHovered] = useState(null);
   const [selected, setSelected] = useState(null);
-  const [geoData, setGeoData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch('/src/data/greece-prefectures.json')
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load JSON');
-        return res.json();
-      })
-      .then(data => {
-        setGeoData(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error("Error loading geojson", err);
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+  
+  const geoData = geoDataRaw;
 
   useEffect(() => {
     if (!geoData || !svgRef.current || !wrapperRef.current) return;
@@ -93,9 +75,6 @@ export default function GreeceGeographyMap() {
       });
 
   }, [geoData, selected]); 
-
-  if (loading) return <div className="text-center p-8 text-slate-300">Φόρτωση χάρτη Ελλάδας...</div>;
-  if (error) return <div className="text-center p-8 text-red-500">Σφάλμα: {error}</div>;
 
   const getInfo = (name) => PREFECTURE_DATA[name] || { population: "Δεν έχουμε δεδομένα.", capital: "Δεν προσδιορίζεται", cities: [] };
 

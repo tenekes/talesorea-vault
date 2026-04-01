@@ -8,146 +8,25 @@
       "connections": 0
     },
     {
-      "id": "formatting-reference",
+      "id": "blog",
       "type": "post",
-      "title": "Formatting Reference",
-      "slug": "formatting-reference",
-      "connections": 13
-    },
-    {
-      "id": "getting-started",
-      "type": "post",
-      "title": "Getting Started",
-      "slug": "getting-started",
-      "connections": 6
+      "title": "Τα Λες Ωραία, είναι Ωραίο blog",
+      "slug": "blog",
+      "connections": 0
     },
     {
       "id": "kostos-energeias-ellada",
       "type": "post",
-      "title": "Ποιο είναι το πραγματικό κόστος",
+      "title": "Ποιο είναι το κόστος ενέργειας;",
       "slug": "kostos-energeias-ellada",
       "connections": 0
-    },
-    {
-      "id": "lets-see",
-      "type": "post",
-      "title": "Για να δουμε",
-      "slug": "lets-see",
-      "connections": 1
-    },
-    {
-      "id": "obsidian-embeds-demo",
-      "type": "post",
-      "title": "Obsidian Embeds Demo",
-      "slug": "obsidian-embeds-demo",
-      "connections": 0
-    },
-    {
-      "id": "sample-folder-based-post",
-      "type": "post",
-      "title": "Sample Folder-Based Post",
-      "slug": "sample-folder-based-post",
-      "connections": 0
-    },
-    {
-      "id": "vault-cms-guide",
-      "type": "post",
-      "title": "Vault CMS Guide",
-      "slug": "vault-cms-guide",
-      "connections": 0
     }
   ],
-  "connections": [
-    {
-      "source": "formatting-reference",
-      "target": "getting-started",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "getting-started",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "sample-folder-based-post",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "vault-cms-guide",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "obsidian-embeds-demo",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "getting-started",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "getting-started",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "getting-started",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "obsidian-embeds-demo",
-      "type": "link"
-    },
-    {
-      "source": "formatting-reference",
-      "target": "obsidian-embeds-demo",
-      "type": "link"
-    },
-    {
-      "source": "getting-started",
-      "target": "vault-cms-guide",
-      "type": "link"
-    },
-    {
-      "source": "getting-started",
-      "target": "formatting-reference",
-      "type": "link"
-    },
-    {
-      "source": "getting-started",
-      "target": "vault-cms-guide",
-      "type": "link"
-    },
-    {
-      "source": "getting-started",
-      "target": "formatting-reference",
-      "type": "link"
-    },
-    {
-      "source": "getting-started",
-      "target": "vault-cms-guide",
-      "type": "link"
-    },
-    {
-      "source": "getting-started",
-      "target": "formatting-reference",
-      "type": "link"
-    },
-    {
-      "source": "lets-see",
-      "target": "vault-cms-guide",
-      "type": "link"
-    }
-  ],
+  "connections": [],
   "metadata": {
-    "totalPosts": 8,
-    "totalConnections": 17,
+    "totalPosts": 3,
+    "totalConnections": 0,
     "maxNodesApplied": false,
-    "originalNodeCount": 8
+    "originalNodeCount": 3
   }
 }

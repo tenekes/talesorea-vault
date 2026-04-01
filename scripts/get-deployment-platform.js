@@ -13,11 +13,12 @@ function getDeploymentPlatform() {
     const configPath = join(process.cwd(), 'src', 'config.ts');
     const configContent = readFileSync(configPath, 'utf8');
     
-    // Extract platform from config
-    const platformMatch = configContent.match(/platform:\s*["']([^"']+)["']/);
+    const platformMatches = [...configContent.matchAll(/platform:\s*["']([^"']+)["']/g)];
     
-    if (platformMatch) {
-      return platformMatch[1];
+    // Get the last match, which is the actual configuration value, not the TypeScript type definition
+    if (platformMatches && platformMatches.length > 0) {
+      const lastMatch = platformMatches[platformMatches.length - 1];
+      return lastMatch[1];
     }
     
     // Fallback to environment variable

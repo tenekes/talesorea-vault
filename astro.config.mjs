@@ -201,7 +201,7 @@ image: {
     optimizeDeps: {
       exclude: ['astro:content', '@astrojs/preact', 'astro:preact:opts']
     },
-    exclude: ['**/_redirects']
+    exclude: ['**/_redirects', '**/_headers']
   },
   build: {
     assets: '_assets'

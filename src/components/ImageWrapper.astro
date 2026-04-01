@@ -76,7 +76,7 @@ let isImageMissing = false;
 
 if (isLocal) {
   try {
-    const files = import.meta.glob<ImageMetadata>("/public/**", {
+    const files = import.meta.glob<ImageMetadata>("/public/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,avif}", {
       import: "default",
     });
     

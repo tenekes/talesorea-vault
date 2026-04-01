@@ -46,7 +46,7 @@ const seoData = providedSeoData || {
   description: frontmatter?.description || siteConfig.description,
   canonical: Astro.url ? Astro.url.href : '',
   ogType: 'website' as const,
-};
+} as SEOData;
 
 // Determine scrollbar class based on configuration
 const scrollbarClass = siteConfig.hideScrollBar ? '' : 'show-scrollbars';
@@ -123,8 +123,10 @@ const scrollbarClass = siteConfig.hideScrollBar ? '' : 'show-scrollbars';
     </>
   )}
 
-  <!-- Default favicon (will be updated by JavaScript) -->
-  <link rel="icon" href="/favicon.png" />
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.png" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
 
   <!-- Command Palette Config for Client Script -->
   <meta name="command-palette-shortcut" content={siteConfig.commandPalette.shortcut || ''}>
@@ -363,8 +365,8 @@ const scrollbarClass = siteConfig.hideScrollBar ? '' : 'show-scrollbars';
     async function initTheme() {
       // Handle dark/light mode
       const storedMode = localStorage.getItem('theme');
-      const systemMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      const mode = storedMode || systemMode;
+      // Set default to 'light' instead of system preference
+      const mode = storedMode || 'light';
 
       document.documentElement.classList.remove('light', 'dark');
       document.documentElement.classList.add(mode);
@@ -385,47 +387,7 @@ const scrollbarClass = siteConfig.hideScrollBar ? '' : 'show-scrollbars';
     // Initialize immediately after config is set
     initTheme().catch(console.error);
 
-    // Set favicon based on system theme
-    function setFavicon() {
-      const faviconThemeAdaptive = window.siteConfig?.faviconThemeAdaptive ?? true;
-      
-      let faviconUrl;
-      
-      if (faviconThemeAdaptive) {
-        // Use theme-based favicons based on browser preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-        if (prefersDark) {
-          faviconUrl = '/favicon-dark.png';
-        } else if (prefersLight) {
-          faviconUrl = '/favicon-light.png';
-        } else {
-          faviconUrl = '/favicon.png';
-        }
-      } else {
-        // Always use static favicon
-        faviconUrl = '/favicon.png';
-      }
-
-      // Remove ALL existing favicon links
-      const existingFavicons = document.querySelectorAll('link[rel="icon"]');
-      existingFavicons.forEach(link => link.remove());
-
-      // Create new favicon link
-      const faviconLink = document.createElement('link');
-      faviconLink.rel = 'icon';
-      faviconLink.type = 'image/png';
-      faviconLink.href = `${faviconUrl}?v=${Date.now()}`;
-      document.head.appendChild(faviconLink);
-
-      // Force favicon refresh by updating page title
-      const originalTitle = document.title;
-      document.title = originalTitle;
-    }
-
-    // Set favicon on page load
-    setFavicon();
+    // Favicon is now handled via the native SVG which includes dark mode support via CSS.
 
     // View Transitions disabled - no need for astro:page-load
 
@@ -441,11 +403,7 @@ const scrollbarClass = siteConfig.hideScrollBar ? '' : 'show-scrollbars';
         if (window.location.hostname === 'localhost' || window.location.hostname.includes('localhost')) {
         }
       }
-      // Only update favicon if theme adaptive is enabled
-      const faviconThemeAdaptive = window.siteConfig?.faviconThemeAdaptive ?? true;
-      if (faviconThemeAdaptive) {
-        setFavicon();
-      }
+      // Theme favicon is handled natively via favicon.svg
     });
 
     // Global theme toggle function - always available regardless of button visibility

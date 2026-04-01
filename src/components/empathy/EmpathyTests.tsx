@@ -10,10 +10,10 @@ export default function EmpathyTests() {
   const [activeTab, setActiveTab] = useState<TabType>('TEQ');
 
   const TABS: { id: TabType; name: string }[] = [
-    { id: 'TEQ', name: 'Toronto Empathy Questionnaire (TEQ)' },
-    { id: 'IRI', name: 'Interpersonal Reactivity Index (IRI)' },
-    { id: 'EQ', name: 'Empathy Quotient (EQ)' },
-    { id: 'RMET', name: 'Reading the Mind in the Eyes Test (RMET)' }
+    { id: 'TEQ', name: 'Ερωτηματολόγιο TEQ' },
+    { id: 'IRI', name: 'Κλίμακα IRI' },
+    { id: 'EQ', name: 'Πηλίκο Ενσυναίσθησης' },
+    { id: 'RMET', name: 'Δοκιμασία των Ματιών (RMET)' }
   ];
 
   return (

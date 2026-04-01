@@ -64,40 +64,40 @@ export const RMET_ITEMS = [
   { id: 0, image: '/posts/empathy/adult_part1/0.webp', options: ['Ζηλιάρης', 'Πανικόβλητος', 'Αλαζονικός', 'Εμπαθής'], answer: 1 }, // Practice
   { id: 1, image: '/posts/empathy/adult_part1/1.webp', options: ['Παιχνιδιάρικος', 'Παρηγορητικός', 'Εκνευρισμένος', 'Βαριεστημένος'], answer: 0 }, // Item 1
   { id: 2, image: '/posts/empathy/adult_part1/2.webp', options: ['Τρομοκρατημένος', 'Αναστατωμένος', 'Αλαζονικός', 'Ενοχλημένος'], answer: 1 }, // Item 2
-  { id: 3, image: '/posts/empathy/adult_part1/3.webp', options: ['Αστειευόμενος', 'Σε σύγχυση', 'Επιθυμία', 'Πεπεισμένος'], answer: 2 }, // Item 3
+  { id: 3, image: '/posts/empathy/adult_part1/3.webp', options: ['Αστειευόμενη', 'Σε σύγχυση', 'Επιθυμία', 'Πεπεισμένη'], answer: 2 }, // Item 3 (Feminine)
   { id: 4, image: '/posts/empathy/adult_part1/4.webp', options: ['Αστειευόμενος', 'Επιμονή', 'Διασκέδαση', 'Χαλαρωμένος'], answer: 1 }, // Item 4
   { id: 5, image: '/posts/empathy/adult_part1/5.webp', options: ['Εκνευρισμένος', 'Σαρκαστικός', 'Ανήσυχος', 'Φιλικός'], answer: 2 }, // Item 5
-  { id: 6, image: '/posts/empathy/adult_part1/6.webp', options: ['Εμβρόντητος', 'Ονειροπόλος', 'Ανυπόμονος', 'Τρομαγμένος'], answer: 1 }, // Item 6
+  { id: 6, image: '/posts/empathy/adult_part1/6.webp', options: ['Εμβρόντητη', 'Ονειροπόλα', 'Ανυπόμονη', 'Τρομαγμένη'], answer: 1 }, // Item 6 (Feminine)
   { id: 7, image: '/posts/empathy/adult_part1/7.webp', options: ['Απολογητικός', 'Φιλικός', 'Άβολος', 'Αποθαρρυμένος'], answer: 2 }, // Item 7
   { id: 8, image: '/posts/empathy/adult_part1/8.webp', options: ['Απελπισμένος', 'Ανακουφισμένος', 'Ντροπαλός', 'Ενθουσιασμένος'], answer: 0 }, // Item 8
-  { id: 9, image: '/posts/empathy/adult_part1/9.webp', options: ['Ενοχλημένος', 'Εχθρικός', 'Τρομοκρατημένος', 'Προβληματισμένος'], answer: 3 }, // Item 9
+  { id: 9, image: '/posts/empathy/adult_part1/9.webp', options: ['Ενοχλημένη', 'Εχθρική', 'Τρομοκρατημένη', 'Προβληματισμένη'], answer: 3 }, // Item 9 (Feminine)
   { id: 10, image: '/posts/empathy/adult_part1/10.webp', options: ['Επιφυλακτικός', 'Επίμονος', 'Βαριεστημένος', 'Εμβρόντητος'], answer: 0 }, // Item 10
   { id: 11, image: '/posts/empathy/adult_part1/11.webp', options: ['Τρομοκρατημένος', 'Διασκεδασμένος', 'Μετανιωμένος', 'Ερωτικός'], answer: 2 }, // Item 11
   { id: 12, image: '/posts/empathy/adult_part1/12.webp', options: ['Αδιάφορος', 'Ντροπιασμένος', 'Σκεπτικός', 'Αποθαρρυμένος'], answer: 2 }, // Item 12
   { id: 13, image: '/posts/empathy/adult_part1/13.webp', options: ['Αποφασιστικός', 'Προσμονή', 'Απειλητικός', 'Ντροπαλός'], answer: 1 }, // Item 13
   { id: 14, image: '/posts/empathy/adult_part1/14.webp', options: ['Εκνευρισμένος', 'Απογοητευμένος', 'Καταθλιπτικός', 'Κατηγορητικός'], answer: 3 }, // Item 14
-  { id: 15, image: '/posts/empathy/adult_part1/15.webp', options: ['Συλλογισμένος', 'Ταραγμένος', 'Ενθαρρυντικός', 'Διασκεδασμένος'], answer: 0 }, // Item 15
+  { id: 15, image: '/posts/empathy/adult_part1/15.webp', options: ['Συλλογισμένη', 'Ταραγμένη', 'Ενθαρρυντική', 'Διασκεδασμένη'], answer: 0 }, // Item 15 (Feminine)
   { id: 16, image: '/posts/empathy/adult_part1/16.webp', options: ['Εκνευρισμένος', 'Σκεπτικός', 'Ενθαρρυντικός', 'Συμπονετικός'], answer: 1 }, // Item 16
-  { id: 17, image: '/posts/empathy/adult_part1/17.webp', options: ['Διστακτικός', 'Στοργικός', 'Παιχνιδιάρικος', 'Εμβρόντητος'], answer: 0 }, // Item 17
+  { id: 17, image: '/posts/empathy/adult_part1/17.webp', options: ['Διστακτική', 'Στοργική', 'Παιχνιδιάρα', 'Εμβρόντητη'], answer: 0 }, // Item 17 (Feminine)
 
   // PART 2 (images 0.webp - 18.webp) -> Σελίδες 1-19 του adult_part2.pdf
-  { id: 18, image: '/posts/empathy/adult_part2/0.webp', options: ['Αποφασιστικός', 'Διασκεδασμένος', 'Εμβρόντητος', 'Βαριεστημένος'], answer: 0 }, // Item 18
-  { id: 19, image: '/posts/empathy/adult_part2/1.webp', options: ['Αλαζονικός', 'Ευγνώμων', 'Σαρκαστικός', 'Διστακτικός'], answer: 3 }, // Item 19
+  { id: 18, image: '/posts/empathy/adult_part2/0.webp', options: ['Αποφασιστική', 'Διασκεδασμένη', 'Εμβρόντητη', 'Βαριεστημένη'], answer: 0 }, // Item 18 (Feminine)
+  { id: 19, image: '/posts/empathy/adult_part2/1.webp', options: ['Αλαζονική', 'Ευγνώμων', 'Σαρκαστική', 'Διστακτική'], answer: 3 }, // Item 19 (Feminine)
   { id: 20, image: '/posts/empathy/adult_part2/2.webp', options: ['Δεσποτικός', 'Φιλικός', 'Ένοχος', 'Τρομοκρατημένος'], answer: 1 }, // Item 20
-  { id: 21, image: '/posts/empathy/adult_part2/3.webp', options: ['Ντροπιασμένος', 'Ονειροπόλος', 'Μπερδεμένος', 'Πανικόβλητος'], answer: 1 }, // Item 21
-  { id: 22, image: '/posts/empathy/adult_part2/4.webp', options: ['Προβληματισμένος', 'Ευγνώμων', 'Επίμονος', 'Ικετευτικός'], answer: 0 }, // Item 22
+  { id: 21, image: '/posts/empathy/adult_part2/3.webp', options: ['Ντροπιασμένη', 'Ονειροπόλα', 'Μπερδεμένη', 'Πανικόβλητη'], answer: 1 }, // Item 21 (Feminine)
+  { id: 22, image: '/posts/empathy/adult_part2/4.webp', options: ['Προβληματισμένη', 'Ευγνώμων', 'Επίμονη', 'Ικετευτική'], answer: 0 }, // Item 22 (Feminine)
   { id: 23, image: '/posts/empathy/adult_part2/5.webp', options: ['Ικανοποιημένος', 'Απολογητικός', 'Προκλητικός', 'Περίεργος'], answer: 2 }, // Item 23
   { id: 24, image: '/posts/empathy/adult_part2/6.webp', options: ['Συλλογισμένος', 'Εκνευρισμένος', 'Ενθουσιασμένος', 'Εχθρικός'], answer: 0 }, // Item 24
-  { id: 25, image: '/posts/empathy/adult_part2/7.webp', options: ['Πανικόβλητος', 'Δύσπιστος', 'Απελπισμένος', 'Ενδιαφερόμενος'], answer: 3 }, // Item 25
+  { id: 25, image: '/posts/empathy/adult_part2/7.webp', options: ['Πανικόβλητη', 'Δύσπιστη', 'Απελπισμένη', 'Εκδηλώνει ενδιαφέρον'], answer: 3 }, // Item 25 (Feminine + Fix)
   { id: 26, image: '/posts/empathy/adult_part2/8.webp', options: ['Θορυβημένος', 'Ντροπαλός', 'Εχθρικός', 'Αγχωμένος'], answer: 2 }, // Item 26
-  { id: 27, image: '/posts/empathy/adult_part2/9.webp', options: ['Αστειευόμενος', 'Επιφυλακτικός', 'Αλαζονικός', 'Καθησυχαστικός'], answer: 1 }, // Item 27
-  { id: 28, image: '/posts/empathy/adult_part2/10.webp', options: ['Ενδιαφερόμενος', 'Αστειευόμενος', 'Στοργικός', 'Ικανοποιημένος'], answer: 0 }, // Item 28
-  { id: 29, image: '/posts/empathy/adult_part2/11.webp', options: ['Ανυπόμονος', 'Εμβρόντητος', 'Εκνευρισμένος', 'Στοχαστικός'], answer: 3 }, // Item 29
-  { id: 30, image: '/posts/empathy/adult_part2/12.webp', options: ['Ευγνώμων', 'Ερωτικός', 'Εχθρικός', 'Απογοητευμένος'], answer: 1 }, // Item 30
-  { id: 31, image: '/posts/empathy/adult_part2/13.webp', options: ['Ντροπιασμένος', 'Σίγουρος', 'Αστειευόμενος', 'Αποθαρρυμένος'], answer: 1 }, // Item 31
+  { id: 27, image: '/posts/empathy/adult_part2/9.webp', options: ['Αστειευόμενη', 'Επιφυλακτική', 'Αλαζονική', 'Καθησυχαστική'], answer: 1 }, // Item 27 (Feminine)
+  { id: 28, image: '/posts/empathy/adult_part2/10.webp', options: ['Εκδηλώνει ενδιαφέρον', 'Αστειευόμενη', 'Στοργική', 'Ικανοποιημένη'], answer: 0 }, // Item 28 (Feminine + Fix)
+  { id: 29, image: '/posts/empathy/adult_part2/11.webp', options: ['Ανυπόμονη', 'Εμβρόντητη', 'Εκνευρισμένη', 'Στοχαστική'], answer: 3 }, // Item 29 (Feminine)
+  { id: 30, image: '/posts/empathy/adult_part2/12.webp', options: ['Ευγνώμων', 'Ερωτική', 'Εχθρική', 'Απογοητευμένη'], answer: 1 }, // Item 30 (Feminine)
+  { id: 31, image: '/posts/empathy/adult_part2/13.webp', options: ['Ντροπιασμένη', 'Σίγουρη', 'Αστειευόμενη', 'Αποθαρρυμένη'], answer: 1 }, // Item 31 (Feminine)
   { id: 32, image: '/posts/empathy/adult_part2/14.webp', options: ['Σοβαρός', 'Ντροπιασμένος', 'Σαστισμένος', 'Θορυβημένος'], answer: 0 }, // Item 32
   { id: 33, image: '/posts/empathy/adult_part2/15.webp', options: ['Ντροπιασμένος', 'Ένοχος', 'Ονειροπόλος', 'Ανήσυχος'], answer: 3 }, // Item 33
-  { id: 34, image: '/posts/empathy/adult_part2/16.webp', options: ['Εμβρόντητος', 'Σαστισμένος', 'Δύσπιστος', 'Τρομοκρατημένος'], answer: 2 }, // Item 34
-  { id: 35, image: '/posts/empathy/adult_part2/17.webp', options: ['Μπερδεμένος', 'Νευρικός', 'Επίμονος', 'Συλλογισμένος'], answer: 1 }, // Item 35
+  { id: 34, image: '/posts/empathy/adult_part2/16.webp', options: ['Εμβρόντητη', 'Σαστισμένη', 'Δύσπιστη', 'Τρομοκρατημένη'], answer: 2 }, // Item 34 (Feminine)
+  { id: 35, image: '/posts/empathy/adult_part2/17.webp', options: ['Μπερδεμένη', 'Νευρική', 'Επίμονη', 'Συλλογισμένη'], answer: 1 }, // Item 35 (Feminine)
   { id: 36, image: '/posts/empathy/adult_part2/18.webp', options: ['Ντροπιασμένος', 'Νευρικός', 'Καχύποπτος', 'Αναποφάσιστος'], answer: 2 } // Item 36
 ];

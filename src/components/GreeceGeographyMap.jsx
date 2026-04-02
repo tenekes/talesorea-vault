@@ -91,6 +91,15 @@ export default function GreeceGeographyMap() {
 
     const g = svg.append('g');
 
+    // Add zoom/pan capabilities, especially useful for mobile
+    const zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .on('zoom', (event) => {
+        g.attr('transform', event.transform);
+      });
+
+    svg.call(zoom);
+
     g.selectAll("path")
       .data(geoData.features)
       .enter()
@@ -124,18 +133,18 @@ export default function GreeceGeographyMap() {
   const getInfo = (name) => PREFECTURE_DATA[name] || { population: "Δεν έχουμε δεδομένα.", capital: "Δεν προσδιορίζεται", cities: [] };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 w-full max-w-6xl mx-auto my-8 bg-slate-900 border border-slate-700 text-slate-100 rounded-xl overflow-hidden shadow-2xl p-4 not-prose">
+    <div className="flex flex-col lg:flex-row gap-6 w-full max-w-6xl mx-auto my-8 bg-slate-900 border border-slate-700 !text-slate-100 rounded-xl overflow-hidden shadow-2xl p-4 not-prose">
       <div 
         ref={wrapperRef} 
-        className="relative flex-grow lg:w-2/3 h-[600px] border border-slate-700 rounded-lg bg-slate-800"
+        className="relative flex-grow lg:w-2/3 h-[600px] border border-slate-700 rounded-lg bg-slate-800 overflow-hidden"
       >
-        <svg ref={svgRef} className="w-full h-full"></svg>
+        <svg ref={svgRef} className="w-full h-full touch-none"></svg>
         
         {hovered && (
           <div className="absolute top-4 left-4 bg-slate-900/90 backdrop-blur-sm border border-slate-600 p-4 rounded-lg shadow-xl pointer-events-none z-10 transition-opacity">
-            <h3 className="font-bold text-xl text-sky-400 mb-1">{hovered.name_greek || hovered.name}</h3>
-            <p className="text-sm text-slate-300">Πληθυσμός: <span className="font-semibold text-slate-100">{getInfo(hovered.name).population}</span></p>
-            <p className="text-xs text-sky-500 mt-2 italic">Κάντε κλικ για λεπτομέρειες</p>
+            <h3 className="font-bold text-xl !text-sky-400 mb-1" style={{color: '#38bdf8'}}>{hovered.name_greek || hovered.name}</h3>
+            <p className="text-sm !text-slate-300" style={{color: '#cbd5e1'}}>Πληθυσμός: <span className="font-semibold !text-slate-100" style={{color: '#f1f5f9'}}>{getInfo(hovered.name).population}</span></p>
+            <p className="text-xs !text-sky-500 mt-2 italic" style={{color: '#0ea5e9'}}>Κάντε κλικ για λεπτομέρειες</p>
           </div>
         )}
       </div>
@@ -144,36 +153,36 @@ export default function GreeceGeographyMap() {
         <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 h-full shadow-inner">
           {selected ? (
             <div className="animate-fade-in flex flex-col h-full">
-              <h2 className="text-3xl font-extrabold text-sky-400 mb-6 border-b border-slate-600 pb-3">
+              <h2 className="text-3xl font-extrabold !text-sky-400 mb-6 border-b border-slate-600 pb-3" style={{color: '#38bdf8'}}>
                 {selected.name_greek || selected.name}
               </h2>
               <div className="space-y-6 flex-grow">
                 <div>
-                  <h4 className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-1">Πρωτεύουσα</h4>
-                  <p className="text-xl font-medium text-slate-100">{getInfo(selected.name).capital}</p>
+                  <h4 className="text-xs !text-slate-400 uppercase tracking-widest font-semibold mb-1" style={{color: '#94a3b8'}}>Πρωτεύουσα</h4>
+                  <p className="text-xl font-medium !text-slate-100" style={{color: '#f1f5f9'}}>{getInfo(selected.name).capital}</p>
                 </div>
                 <div>
-                  <h4 className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-1">Πληθυσμός</h4>
-                  <p className="text-xl font-medium text-slate-100">{getInfo(selected.name).population}</p>
+                  <h4 className="text-xs !text-slate-400 uppercase tracking-widest font-semibold mb-1" style={{color: '#94a3b8'}}>Πληθυσμός</h4>
+                  <p className="text-xl font-medium !text-slate-100" style={{color: '#f1f5f9'}}>{getInfo(selected.name).population}</p>
                 </div>
                 <div>
-                  <h4 className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-2">Μεγάλες Πόλεις</h4>
+                  <h4 className="text-xs !text-slate-400 uppercase tracking-widest font-semibold mb-2" style={{color: '#94a3b8'}}>Μεγάλες Πόλεις</h4>
                   <div className="flex flex-wrap gap-2 mt-1">
                     {getInfo(selected.name).cities.map((city, idx) => (
-                      <span key={idx} className="bg-slate-700 text-slate-200 px-3 py-1 rounded-full text-sm shadow-sm border border-slate-600">
+                      <span key={idx} className="bg-slate-700 !text-slate-200 px-3 py-1 rounded-full text-sm shadow-sm border border-slate-600" style={{color: '#e2e8f0'}}>
                         {city}
                       </span>
                     ))}
                     {getInfo(selected.name).cities.length === 0 && (
-                      <span className="text-slate-500 italic text-sm">Δεν καταγράφονται</span>
+                      <span className="!text-slate-500 italic text-sm" style={{color: '#64748b'}}>Δεν καταγράφονται</span>
                     )}
                   </div>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center h-full text-slate-400 text-center gap-4">
-              <div className="text-sky-500/50">
+            <div className="flex flex-col items-center justify-center h-full !text-slate-400 text-center gap-4" style={{color: '#94a3b8'}}>
+              <div className="!text-sky-500/50" style={{color: 'rgba(14, 165, 233, 0.5)'}}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>

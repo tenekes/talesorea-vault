@@ -191,7 +191,7 @@ export const siteConfig: SiteConfig = {
   // [CONFIG:SITE_DESCRIPTION]
   description: "Νέα Φανταστικά Κείμενα - Πραγματική Ενημέρωση",
   // [CONFIG:SITE_AUTHOR]
-  author: "ΝΚ",
+  author: "Ν",
   // [CONFIG:SITE_LANGUAGE]
   language: "el",
   // [CONFIG:FAVICON_THEME_ADAPTIVE]

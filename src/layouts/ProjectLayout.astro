@@ -132,7 +132,8 @@ const { prev: prevProject, next: nextProject } = getAdjacentPosts(visibleProject
   <div class="py-8 relative">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 relative" style={`max-width: ${siteConfig.layout.contentWidth}`}>
       <!-- Main content -->
-      <article class={`bg-primary-50 dark:bg-primary-900 rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${project.data.image && project.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
+      {/* Project container background handled by parchment theme - was: bg-primary-50 dark:bg-primary-900 */}
+      <article class={`rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${project.data.image && project.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
         {/* Cover image */}
         {project.data.image && project.data.hideCoverImage !== true && (() => {
           // Process image path similar to ProjectCard
@@ -346,7 +347,7 @@ const { prev: prevProject, next: nextProject } = getAdjacentPosts(visibleProject
 
       <!-- Desktop TOC - floats to the right of the content container -->
       {shouldShowTOC && (
-        <div class="hidden xl:block absolute top-0 left-full ml-1 w-[280px] h-full">
+        <div class="hidden xl:block absolute top-0 left-full ml-1 w-[280px] h-full" style="background-color: var(--g-bg);">
           <div class="sticky top-24 pb-6" id="toc">
             <TableOfContents headings={toc} />
           </div>

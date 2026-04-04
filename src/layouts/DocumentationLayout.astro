@@ -106,7 +106,8 @@ const structuredData = {
         allDocs={visibleDocs}
       />
       <!-- Documentation content -->
-      <article class={`bg-primary-50 dark:bg-primary-900 rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${documentation.data.image && documentation.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
+      {/* Documentation container background handled by parchment theme - was: bg-primary-50 dark:bg-primary-900 */}
+      <article class={`rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${documentation.data.image && documentation.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
         {documentation.data.image && documentation.data.hideCoverImage !== true && (() => {
           // Process image path similar to other layouts
           let rawImage = documentation.data.image;
@@ -276,7 +277,7 @@ const structuredData = {
 
       <!-- Desktop TOC - floats to the right of the content container -->
       {shouldShowTOC && (
-        <div class="hidden xl:block absolute top-0 left-full ml-1 w-64 h-full">
+        <div class="hidden xl:block absolute top-0 left-full ml-1 w-64 h-full" style="background-color: var(--g-bg);">
           <div class="sticky top-24 pb-6" id="toc">
             <TableOfContents headings={toc} />
           </div>

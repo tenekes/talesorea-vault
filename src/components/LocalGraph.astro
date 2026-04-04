@@ -26,8 +26,8 @@ const visiblePosts = allPosts.filter(p => shouldShowPost(p, isDev));
 const shouldShowGraph = true;
 ---
 
-{shouldShowGraph && (
-  <div id="local-graph-container" class="relative w-full bg-primary-50 dark:bg-primary-800 rounded-xl border border-primary-200 dark:border-primary-700 shadow-lg backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95 overflow-hidden" style="width: 280px; max-width: 280px; height: 280px;">
+  <div id="local-graph-container" class="relative w-full rounded-xl border border-primary-200 dark:border-primary-700 shadow-lg backdrop-blur-sm overflow-hidden" style="width: 280px; max-width: 280px; height: 280px; background-color: var(--g-bg);">
+    {/* Graph container background handled by parchment theme - was: bg-primary-50 dark:bg-primary-800 bg-opacity-95 dark:bg-opacity-95 */}
 
     <!-- Icons in top right corner -->
     <div class="absolute top-3 right-3 z-20 flex items-center gap-2">
@@ -549,7 +549,8 @@ const shouldShowGraph = true;
     
     modal.innerHTML = `
       <div class="flex min-h-full items-center justify-center p-4">
-        <div class="relative w-full max-w-6xl h-[80vh] bg-primary-50 dark:bg-primary-800 rounded-xl shadow-2xl border border-primary-200 dark:border-primary-700 animate-scale-in">
+        <div class="relative w-full max-w-6xl h-[80vh] rounded-xl shadow-2xl border border-primary-200 dark:border-primary-700 animate-scale-in" style="background-color: var(--g-bg);">
+          {/* Fullscreen background was: bg-primary-50 dark:bg-primary-800 */}
 
           <button 
             id="local-graph-fullscreen-close"
@@ -562,7 +563,8 @@ const shouldShowGraph = true;
             </svg>
           </button>
 
-          <div id="local-graph-fullscreen-container" class="w-full h-full bg-primary-50 dark:bg-primary-800 rounded-xl overflow-hidden">
+          <div id="local-graph-fullscreen-container" class="w-full h-full rounded-xl overflow-hidden" style="background-color: var(--g-bg);">
+            {/* Inner background was: bg-primary-50 dark:bg-primary-800 */}
           </div>
         </div>
       </div>

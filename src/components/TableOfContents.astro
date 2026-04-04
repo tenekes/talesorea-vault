@@ -17,7 +17,8 @@ const shouldShowTOC = filteredHeadings.length > 1;
 ---
 
 {shouldShowTOC && (
-  <nav class="toc-nav toc-container p-4 pr-5 bg-white dark:bg-primary-900 rounded-xl border border-primary-200 dark:border-primary-700 shadow-lg backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95" data-max-depth={maxDepth}>
+  <nav class="toc-nav toc-container p-4 pr-5 rounded-xl border border-primary-200 dark:border-primary-700 shadow-lg backdrop-blur-sm" style="background-color: var(--g-bg);" data-max-depth={maxDepth}>
+    {/* Sidebar/TOC background handled by parchment theme - was: bg-white dark:bg-primary-900 bg-opacity-95 dark:bg-opacity-95 */}
     <button
       class="toc-toggle w-full font-semibold text-primary-900 dark:text-primary-50 mb-3 flex items-center justify-between text-sm hover:text-highlight-600 dark:hover:text-highlight-400 transition-colors"
       aria-expanded="true"

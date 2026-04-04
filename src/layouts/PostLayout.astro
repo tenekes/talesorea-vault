@@ -130,7 +130,8 @@ if (siteConfig.postOptions.graphView.enabled && siteConfig.postOptions.graphView
   <div class="py-8 relative">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 relative" style={`max-width: ${siteConfig.layout.contentWidth}`}>
       <!-- Main content -->
-      <article class={`bg-primary-50 dark:bg-primary-900 rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${siteConfig.postOptions.showPostCardCoverImages !== 'none' && post.data.image && post.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
+      {/* Post container background handled by parchment theme - was: bg-primary-50 dark:bg-primary-900 */}
+      <article class={`rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${siteConfig.postOptions.showPostCardCoverImages !== 'none' && post.data.image && post.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
         {/* Cover image - shown if global config allows and not hidden by frontmatter */}
         {siteConfig.postOptions.showPostCardCoverImages !== 'none' && post.data.image && post.data.hideCoverImage !== true && (() => {
           // Process image path similar to PostCard
@@ -247,7 +248,9 @@ if (siteConfig.postOptions.graphView.enabled && siteConfig.postOptions.graphView
               {post.data.tags.map(tag => (
                 <a
                   href={`/posts/tag/${encodeURIComponent(tag)}`}
-                  class="text-xs text-primary-600 dark:text-primary-300 bg-primary-100 dark:bg-primary-800 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 transition-colors hover:bg-highlight-100 dark:hover:bg-highlight-800"
+                  class="text-xs text-primary-600 dark:text-primary-300 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 transition-colors hover:bg-highlight-100 dark:hover:bg-highlight-800"
+                  style="background-color: rgba(0,0,0,0.03);"
+                  {/* Tag background was: bg-primary-100 dark:bg-primary-800 */}
                 >
                   {tag}
                 </a>
@@ -317,18 +320,18 @@ if (siteConfig.postOptions.graphView.enabled && siteConfig.postOptions.graphView
         </div>
       </article>
 
-      <!-- Desktop Left Sidebar - Graph (top left) -->
+      {/* Desktop Left Sidebar - Graph (top left) - background parchment */}
       {hasLocalGraphConnections && (
-        <div class="hidden xl:block absolute top-0 right-full mr-1 w-[280px] h-full">
+        <div class="hidden xl:block absolute top-0 right-full mr-1 w-[280px] h-full" style="background-color: var(--g-bg);">
           <div class="sticky top-24 pb-6" id="graph-sidebar">
             <LocalGraph currentSlug={post.id} />
           </div>
         </div>
       )}
 
-      <!-- Desktop Right Sidebar - TOC -->
+      {/* Desktop Right Sidebar - TOC - background parchment */}
       {shouldShowTOC && (
-        <div class="hidden xl:block absolute top-0 left-full ml-1 w-[280px] h-full">
+        <div class="hidden xl:block absolute top-0 left-full ml-1 w-[280px] h-full" style="background-color: var(--g-bg);">
           <div class="sticky top-24 pb-6" id="toc-sidebar">
             <TableOfContents headings={toc} />
           </div>

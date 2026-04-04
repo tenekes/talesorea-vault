@@ -198,7 +198,9 @@ const shouldShowCoverImage = (() => {
           {tags.slice(0, 3).map((tag) => (
             <a
               href={`/posts/tag/${tag}`}
-              class="inline-block text-xs text-primary-600 dark:text-primary-300 bg-primary-100 dark:bg-primary-800 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 transition-colors hover:bg-highlight-100 dark:hover:bg-highlight-800 mr-2 mb-1"
+              class="inline-block text-xs text-primary-600 dark:text-primary-300 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 transition-colors hover:bg-highlight-100 dark:hover:bg-highlight-800 mr-2 mb-1"
+              style="background-color: rgba(0,0,0,0.03);"
+              {/* Tag background was: bg-primary-100 dark:bg-primary-800 */}
               aria-label={`View posts tagged with ${tag}`}
             >
               {tag}
@@ -206,7 +208,9 @@ const shouldShowCoverImage = (() => {
           ))}
           {tags.length > 3 && (
             <span 
-              class="inline-block text-xs text-primary-500 dark:text-primary-400 bg-primary-50 dark:bg-primary-800 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 mr-2 mb-1"
+              class="inline-block text-xs text-primary-500 dark:text-primary-400 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 mr-2 mb-1"
+              style="background-color: rgba(0,0,0,0.03);"
+              {/* Tag background was: bg-primary-50 dark:bg-primary-800 */}
               aria-label={`${tags.length - 3} ακόμα ετικέτες`}
             >
               + {tags.length - 3} ακόμα

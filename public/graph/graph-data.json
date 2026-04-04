@@ -15,6 +15,20 @@
       "connections": 0
     },
     {
+      "id": "diasosi-stin-ellada",
+      "type": "post",
+      "title": "Διάσωση στην Ελλάδα",
+      "slug": "diasosi-stin-ellada",
+      "connections": 0
+    },
+    {
+      "id": "greek-data",
+      "type": "post",
+      "title": "Στοιχεία για Στατιστική Χρήση",
+      "slug": "greek-data",
+      "connections": 0
+    },
+    {
       "id": "kostos-energeias-ellada",
       "type": "post",
       "title": "Ποιο είναι το κόστος ενέργειας;",
@@ -24,9 +38,9 @@
   ],
   "connections": [],
   "metadata": {
-    "totalPosts": 3,
+    "totalPosts": 5,
     "totalConnections": 0,
     "maxNodesApplied": false,
-    "originalNodeCount": 3
+    "originalNodeCount": 5
   }
 }

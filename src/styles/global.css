@@ -233,6 +233,14 @@ html {
   scroll-padding-top: 2rem;
 }
 
+/* Text Scramble 'Dud' character styling */
+.dud {
+  opacity: 1;
+  color: var(--g-ink);
+  font-family: var(--font-mono, 'JetBrains Mono'), monospace;
+  font-weight: 400;
+}
+
 body {
   background-color: var(--g-bg);
   color: var(--g-ink);

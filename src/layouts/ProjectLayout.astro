@@ -208,7 +208,7 @@ const { prev: prevProject, next: nextProject } = getAdjacentPosts(visibleProject
         <div class={`p-6 ${project.data.image && project.data.hideCoverImage !== true ? 'rounded-b-lg' : 'rounded-lg'}`}>
           <!-- Project header -->
           <header class="mb-4 relative">
-            <h1 class="text-xl font-bold text-primary-900 dark:text-primary-50 mb-6 leading-tight pr-20">
+            <h1 class="text-xl font-bold text-primary-900 dark:text-primary-50 mb-6 leading-tight pr-20" data-scramble>
               {project.data.title}
             </h1>
 

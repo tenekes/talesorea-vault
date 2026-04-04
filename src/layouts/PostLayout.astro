@@ -206,7 +206,7 @@ if (siteConfig.postOptions.graphView.enabled && siteConfig.postOptions.graphView
         <div class={`p-6 ${siteConfig.postOptions.showPostCardCoverImages !== 'none' && post.data.image && post.data.hideCoverImage !== true ? 'rounded-b-lg' : 'rounded-lg'}`}>
           <!-- Post header -->
           <header class="mb-4">
-          <h1 class="text-xl font-bold text-primary-900 dark:text-primary-50 mb-6 leading-tight">
+          <h1 class="text-xl font-bold text-primary-900 dark:text-primary-50 mb-6 leading-tight" data-scramble>
             {post.data.title}
           </h1>
 

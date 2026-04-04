@@ -88,10 +88,10 @@ const tickerPosts = processedPosts.slice(0, 5);
         <p class="gh-hero__eyebrow">ΑΡΧΕΙΟ_ΚΕΙΜΕΝΩΝ</p>
         <h1 class="gh-hero__title">
           <span class="gh-hero__title-big">Τα Λες Ωραία</span>
-          <span class="gh-hero__title-sub">Νέα · Φαντασία · Πραγματικότητα</span>
+          <span class="gh-hero__title-sub">· Σου έχω φανταστικά νέα ·</span>
         </h1>
         <div class="gh-hero__meta">
-          <span>v1.0 — {nowDate}</span>
+          <span>Τι παίζει σήμερα — {nowDate}</span>
           <span class="gh-sep">│</span>
           <span>{processedPosts.length} κείμενα</span>
           <span class="gh-sep">│</span>
@@ -1675,7 +1675,7 @@ body.dark:has(#gh) #main-header,
   --g-muted:   #5A5248;
   --g-line:    rgba(26,26,26,0.18);
   --g-mono:    'Roboto Mono', 'Courier New', monospace;
-  --g-sans:    'Space Grotesk', 'Inter', sans-serif;
+  --g-sans:    'Roboto Flex', 'Inter', sans-serif;
   --g-black:   #111010;
 
   font-family: var(--g-mono);
@@ -1718,7 +1718,7 @@ body.dark:has(#gh) #main-header,
 .gh-hero__title-big {
   display: block;
   font-family: var(--g-sans);
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--g-ink);
@@ -1758,7 +1758,7 @@ body.dark:has(#gh) #main-header,
 .gh-hero__deco {
   width: clamp(110px, 13vw, 170px);
   height: clamp(110px, 13vw, 170px);
-  opacity: 0.22;
+  opacity: 1;
   color: var(--g-ink);
   flex-shrink: 0;
 }

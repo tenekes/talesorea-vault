@@ -211,9 +211,9 @@ export const siteConfig: SiteConfig = {
     source: "cdn", // "local" for self-hosted @fontsource fonts, "cdn" for Google Fonts CDN
     families: {
       // [CONFIG:FONT_BODY]
-      body: "Roboto Mono",      // Body text font family
+      body: "Roboto Flex",      // Body text font family
       // [CONFIG:FONT_HEADING]
-      heading: "Roboto Mono",   // Heading font family  
+      heading: "Roboto Flex",   // Heading font family  
       // [CONFIG:FONT_MONO]
       mono: "Roboto Mono", // Monospace font family
     },
@@ -505,6 +505,7 @@ export function getTableOfContentsEnabled(): boolean {
 export function getFontFamily(fontName: string): string {
   // Convert font name to CSS font-family with fallbacks
   const fontMap: Record<string, string> = {
+    'Roboto Flex': "'Roboto Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     'Inter': "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     'Roboto': "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
     'Open Sans': "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
@@ -532,7 +533,7 @@ export function getFontFamily(fontName: string): string {
 export function getGoogleFontsUrl(headingFont: string, bodyFont: string): string {
   // Google Fonts that are commonly used and available
   const googleFonts = [
-    'Inter', 'Roboto', 'Open Sans', 'Lato', 'Poppins', 'Source Sans Pro',
+    'Inter', 'Roboto', 'Roboto Flex', 'Open Sans', 'Lato', 'Poppins', 'Source Sans Pro',
     'Nunito', 'Montserrat', 'Playfair Display', 'Merriweather', 'Lora',
     'Crimson Text', 'PT Serif', 'Libre Baskerville', 'Fira Code',
     'JetBrains Mono', 'Source Code Pro', 'IBM Plex Mono', 'Cascadia Code'

@@ -6,9 +6,10 @@ export interface Props {
   currentDocId: string;
   currentCategory: string | null;
   allDocs: CollectionEntry<'docs'>[];
+  isNested?: boolean;
 }
 
-const { currentDocId, currentCategory, allDocs } = Astro.props;
+const { currentDocId, currentCategory, allDocs, isNested = false } = Astro.props;
 
 // Filter docs by category
 // If current page has no category (or "General"), show all docs
@@ -45,18 +46,12 @@ filteredDocs.sort((a, b) => {
 });
 
 // Determine sidebar header text
-const sidebarHeader = currentCategory && currentCategory !== 'General' ? currentCategory : 'Documentation';
+const sidebarHeader = currentCategory && currentCategory !== 'General' ? currentCategory : 'Τεκμηρίωση';
+
 ---
 
-<!-- Desktop Sidebar (visible at xl breakpoint and above, hidden on mobile - same behavior as TOC) -->
-<aside
-  id="docs-sidebar-desktop"
-  class="hidden xl:block absolute top-0 right-full w-64 mr-4 h-full pointer-events-auto"
-  aria-label="Documentation navigation"
->
-  <div class="sticky top-24 pb-6">
+{isNested ? (
     <div class="rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm p-4" style="background-color: var(--g-bg);">
-      {/* Sidebar background handled by parchment theme - was: bg-primary-50 dark:bg-primary-900 */}
       <div class="flex items-center gap-2 mb-4">
         <Icon name="book-open" class="w-5 h-5 text-primary-600 dark:text-primary-400" />
         <h2 class="text-sm font-semibold text-primary-900 dark:text-primary-50">
@@ -84,8 +79,45 @@ const sidebarHeader = currentCategory && currentCategory !== 'General' ? current
         </nav>
       </div>
     </div>
-  </div>
-</aside>
+) : (
+  <!-- Desktop Sidebar (visible at xl breakpoint and above, hidden on mobile - same behavior as TOC) -->
+  <aside
+    id="docs-sidebar-desktop"
+    class="hidden xl:block absolute top-0 right-full w-64 mr-4 h-full pointer-events-auto"
+    aria-label="Documentation navigation"
+  >
+    <div class="sticky top-24 pb-6">
+      <div class="rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm p-4" style="background-color: var(--g-bg);">
+        <div class="flex items-center gap-2 mb-4">
+          <Icon name="book-open" class="w-5 h-5 text-primary-600 dark:text-primary-400" />
+          <h2 class="text-sm font-semibold text-primary-900 dark:text-primary-50">
+            {sidebarHeader}
+          </h2>
+        </div>
+        <div class="docs-sidebar-content overflow-x-hidden overflow-y-auto">
+          <nav class="space-y-1">
+          {filteredDocs.map((doc) => {
+            const isActive = doc.id === currentDocId;
+            return (
+              <a
+                href={`/docs/${doc.id}`}
+                class={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                  isActive
+                    ? 'bg-highlight-50 dark:bg-highlight-900/20 text-highlight-600 dark:text-highlight-400 font-semibold'
+                    : 'text-primary-600 dark:text-primary-300 hover:bg-primary-100 dark:hover:bg-primary-800 hover:text-highlight-600 dark:hover:text-highlight-400'
+                }`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {doc.data.title}
+              </a>
+            );
+          })}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </aside>
+)}
 
 <script>
   // Constants for docs sidebar height calculation

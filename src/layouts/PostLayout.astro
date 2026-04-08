@@ -250,7 +250,6 @@ if (siteConfig.postOptions.graphView.enabled && siteConfig.postOptions.graphView
                   href={`/posts/tag/${encodeURIComponent(tag)}`}
                   class="text-xs text-primary-600 dark:text-primary-300 px-2.5 py-1 rounded-full border border-primary-200 dark:border-primary-700 transition-colors hover:bg-highlight-100 dark:hover:bg-highlight-800"
                   style="background-color: rgba(0,0,0,0.03);"
-                  {/* Tag background was: bg-primary-100 dark:bg-primary-800 */}
                 >
                   {tag}
                 </a>
@@ -320,23 +319,26 @@ if (siteConfig.postOptions.graphView.enabled && siteConfig.postOptions.graphView
         </div>
       </article>
 
-      {/* Desktop Left Sidebar - Graph (top left) - background parchment */}
-      {hasLocalGraphConnections && (
-        <div class="hidden xl:block absolute top-0 right-full mr-1 w-[280px] h-full" style="background-color: var(--g-bg);">
-          <div class="sticky top-24 pb-6" id="graph-sidebar">
-            <LocalGraph currentSlug={post.id} />
-          </div>
+      <!-- Desktop Left Sidebars (TOC and Graph) -->
+      <div class="hidden xl:block absolute top-0 right-full mr-6 w-[280px] h-full">
+        <div class="sticky top-24 pb-6 space-y-12">
+          {shouldShowTOC && (
+            <div id="toc-sidebar">
+              <TableOfContents headings={toc} />
+            </div>
+          )}
+          
+          {hasLocalGraphConnections && (
+            <div id="graph-sidebar">
+              <div class="text-[10px] tracking-widest uppercase text-primary-500 dark:text-primary-400 mb-4 pb-1 border-b border-dotted border-primary-200 dark:border-primary-700 font-mono">
+                Τοπικό Γράφημα
+              </div>
+              <LocalGraph currentSlug={post.id} />
+            </div>
+          )}
         </div>
-      )}
+      </div>
 
-      {/* Desktop Right Sidebar - TOC - background parchment */}
-      {shouldShowTOC && (
-        <div class="hidden xl:block absolute top-0 left-full ml-1 w-[280px] h-full" style="background-color: var(--g-bg);">
-          <div class="sticky top-24 pb-6" id="toc-sidebar">
-            <TableOfContents headings={toc} />
-          </div>
-        </div>
-      )}
     </div>
   </div>
 

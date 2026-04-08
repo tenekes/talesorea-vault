@@ -99,12 +99,23 @@ const structuredData = {
 
   <div class="py-8">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 relative" style={`max-width: ${siteConfig.layout.contentWidth}`}>
-      <!-- Desktop Sidebar (inside content container, positioned relative to it) -->
-      <DocsSidebar 
-        currentDocId={documentation.id}
-        currentCategory={currentCategory}
-        allDocs={visibleDocs}
-      />
+      <!-- Left Sidebars (ToC and Category Sidebar) -->
+      <div class="hidden xl:block absolute top-0 right-full mr-4 w-64 h-full">
+        <div class="sticky top-24 pb-6 space-y-8">
+          {shouldShowTOC && (
+            <div id="toc-container">
+              <TableOfContents headings={toc} />
+            </div>
+          )}
+          
+          <DocsSidebar 
+            currentDocId={documentation.id}
+            currentCategory={currentCategory}
+            allDocs={visibleDocs}
+            isNested={true}
+          />
+        </div>
+      </div>
       <!-- Documentation content -->
       {/* Documentation container background handled by parchment theme - was: bg-primary-50 dark:bg-primary-900 */}
       <article class={`rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm ${documentation.data.image && documentation.data.hideCoverImage !== true ? 'overflow-hidden' : ''}`}>
@@ -275,14 +286,6 @@ const structuredData = {
         </nav>
       )}
 
-      <!-- Desktop TOC - floats to the right of the content container -->
-      {shouldShowTOC && (
-        <div class="hidden xl:block absolute top-0 left-full ml-1 w-64 h-full" style="background-color: var(--g-bg);">
-          <div class="sticky top-24 pb-6" id="toc">
-            <TableOfContents headings={toc} />
-          </div>
-        </div>
-      )}
     </div>
   </div>
 
@@ -366,8 +369,8 @@ const structuredData = {
       initializeImageGrids();
 
       // Initialize docs sidebar
-      if (window.initializeDocsSidebar) {
-        window.initializeDocsSidebar();
+      if ((window as any).initializeDocsSidebar) {
+        (window as any).initializeDocsSidebar();
       }
 
         // Process all external links in content to open in new tabs (including reference links)
